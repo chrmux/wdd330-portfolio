@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-1</title>
+   
+    <style>
+        body {
+            background-color: rgb(198, 198, 198);
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            text-align: center;
+            margin: auto;
+        }
+       
+        input {
+            width: 25%;
+        }
+
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: rgb(162, 145, 112);
+        }
+        img {
+           margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Week 1 (notes and work)</h1>
+        <h2>Story Editor</h2>
+        <a href="../index.html">Back to Index</a>
+        <hr>
+    </header>
+    <section>Story Name: <input id=name_input placeholder="Remember your title to recall later"></input><br><br></section>
+    <section>
+        <button onclick="loadStory()">Find and Edit</button>
+        <button onclick="saveStory()">Save It</button>
+        <button onclick="displayStory()">Display It</button>
+    </section>
+    <br>
+    <div>
+        <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+    </div>
+    <!--<div id="story_display">When you find your file, click display and it will show it here.</div>
+<hr><h5>Notes for this week</h5>
+<img src="mobileUXnotes.png" alt="notes from video mobileUXnotes" width="425px" height="550">
+<a href="https://github.com/Alain/wdd330">link to github repo for wdd330</a>-->
+ <script src="js/week01.js"></script>
+</body>
+<footer>
+    &copy; 2022 | Portfolio | Alain Solohery
+</footer>
+
+
+</html>
