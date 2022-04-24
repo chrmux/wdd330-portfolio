@@ -17,7 +17,7 @@ body {
     padding: 10px;
     font-size: 20px;
     border-radius: 10px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     box-shadow: 5px 10px 15px;
     transition: width 6s, height 2s, background-color 2s, transform 2s;
 
@@ -25,7 +25,7 @@ body {
 
 a:hover {
     font-size: 600;
-    /*transform: skew(10deg, 4deg);*/
+    
 }
 h1 a{
     color:rgb(90, 55, 13);
@@ -60,5 +60,9 @@ ul p{
     text-align: left;
 }
 h1 {
+    text-align: center;
+}
+
+footer{
     text-align: center;
 }
