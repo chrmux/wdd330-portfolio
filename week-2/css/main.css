@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211);
     font-size: 600;
     font-family: lato, sans-serif;
 }
@@ -69,4 +69,13 @@ header {
 footer{
     text-align: center;
 }
-
+#input1, #input2, button{
+    height: 50px;
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+margin{
+    padding-bottom: 20px;
+}
