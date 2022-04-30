@@ -79,3 +79,7 @@ form{
 margin{
     padding-bottom: 20px;
 }
+a {
+    text-align: center;
+    display: block;
+}
