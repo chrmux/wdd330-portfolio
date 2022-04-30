@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 1 Notes</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Russo+One&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+   <header>
+        <h1 id="directory">Alain's wdd330 Links</h1>
+        <h5><a href="https://github.com/Alainsol/wdd330-portfolio">link to Alain's github repo for WDD330</a></h5>
+        <hr>
+    </header>
+    <form>
+        <input id="input1" type="text">
+        <input id="input2" type="text">
+        <button type="button" onclick="getVal()">click</button>
+        <button type="button" onclick="sum()"> +  </button>
+        <div id="weekteamwork2">
+
+        </div>
+        
+        <div id="weekteamwork">
+
+        </div>
+
+        <script>
+        function sum() {
+            const val1 = document.getElementById('input1').value;
+            const val2 = document.getElementById('input2').value;
+
+
+            let sum = val1 + val2 ;
+            const div = document.getElementById('weekteamwork2');
+            div.innerHTML = sum;
+        }
+
+    function getVal() {
+        const val = document. querySelector('input').value;
+        const div = document.getElementById('weekteamwork');
+
+        if(isNaN(val)){
+            div.innerHTML = val;   
+        
+        }else {
+            div.innerHTML = sumUp(val);   
+        }
+    }
+
+
+    function sumUp(n){
+
+    let sum = 0;
+    for( let i = 1; i<= n; i++) {
+        sum += i ;
+    }
+    return sum ;
+ } 
+   
+
+        </script>
+    </form>
+
+   
+        
+
+</body>
+<footer>
+    &copy; 2022 | Portfolio | Alain Solohery
+</footer>
+
+
+
+</html>
