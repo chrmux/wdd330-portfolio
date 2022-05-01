@@ -30,4 +30,10 @@ html{
     
 
 }
+input#coreq1Input
+input#coreq1Input{
+    height: 50px;
+    border-radius: 5px 5px;
+}
+
 
