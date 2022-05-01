@@ -18,60 +18,42 @@
         <h5><a href="https://github.com/Alainsol/wdd330-portfolio">link to Alain's github repo for WDD330</a></h5>
         <hr>
     </header>
-    <form>
-        <input id="input1" type="text">
-        <input id="input2" type="text">
-        <button type="button" onclick="getVal()">click</button>
-        <button type="button" onclick="sum()"> +  </button>
-        <div id="weekteamwork2">
-
+    
+        <div id="theme" class="fa fa-moon"></div>
+        <header>
+            <h1>
+                Team 5
+            </h1>
+        </header>
+        <h2>Core Requirement 1</h2>
+        <input id="coreq1Input" type="text" />
+        <button id="coreq1Button" onclick="coreq1()">Submit</button>
+        <div id="coreq1Output"></div>
+    
+        <h2>Core Requirement 2</h2>
+        <input id="coreq2Input" type="text" />
+        <button id="coreq2Button" onclick="coreq2()">Sum</button>
+        <div id="coreq2Output"></div>
+    
+        <h2>Stretch Goals</h2>
+        <form>
+            1st Number : <input type="text" id="1stNumber" /><br>
+            2nd Number: <input type="text" id="2ndNumber" /><br>
+            <input type="button" onClick="addBy()" Value="Addition" />
+            <input type="button" onClick="subtractBy()" Value="Subtraction" />
+            <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        </form>
+        <p>The Result is : <br>
+            <span id="result"></span>
+        </p>
+    
+        <div class="home">
+            <a href="/">Back to Home</a>
         </div>
-        
-        <div id="weekteamwork">
 
-        </div>
-
-        <script>
-        function sum() {
-            const val1 = document.getElementById('input1').value;
-            const val2 = document.getElementById('input2').value;
-
-
-            let sum = parseInt(val1) + parseInt(val2) ;
-            const div = document.getElementById('weekteamwork2');
-            div.innerHTML = sum;
-        }
-
-    function getVal() {
-        const val = document. querySelector('input').value;
-        const div = document.getElementById('weekteamwork');
-
-        if(isNaN(val)){
-            div.innerHTML = val;   
-        
-        }else {
-            div.innerHTML = sumUp(val);   
-        }
-    }
-
-
-    function sumUp(n){
-
-    let sum = 0;
-    for( let i = 1; i<= n; i++) {
-        sum += i ;
-    }
-    return sum ;
- } 
-   
-
-        </script>
-    </form>
-
-   
-        
-
+    
 </body>
+<script src="js/main.js"></script>
 <footer>
     &copy; 2022 | Portfolio | Alain Solohery
 </footer>
