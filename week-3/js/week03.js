@@ -131,7 +131,7 @@ for(const key in superman) {
 DOM (Document Object Model represents an Html as a network of connected nodes that form a tree-like structure
 Everything on web page is represented by a node htmltags ,the text insde these tags ,even the attributes of a tagdg are all nodes 
 The Html tag is the root node and every other part of the dcument is a child node of this 
-Dome is not a part of javascript because it is langauage agnostic.This means that it can be used in any programming language, not just JavaCriptt,
+Dom is not a part of javascript because it is langauage agnostic.This means that it can be used in any programming language, not just JavaCriptt,
 API that let us acess and modify diffrernts parts of a web page using the built in document object  )
 
 Console Shortcuts
