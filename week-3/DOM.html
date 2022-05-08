@@ -4,175 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting an Element by Its ID
-    </title>
+    <title>DOM</title>
 </head>
 <body>
-    <p>Every id attribute should be unique to just one element, so this method will return a
-        reference to that element. For this reason, it’s a very quick way of finding elements in a
-        document. It is also supported in all the major browsers.
-        If no element exists with the given ID, null is returned.</p>
     
-</body>
+
+<h1>Mountains</h1>
+
+<div id="mountains"></div>
+
 <script>
- //Getting an Element by Its ID
+  const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
 
-    title = document.getElementById('title');
-//Get Elements by Their Tag Name
-    paragraphs = document.getElementsByTagName('p'); 
+  MOUNTAINS.sort((a, b) => { return parseInt(a.height) > parseInt(b.height); } )
 
-//Get Elements by Their Class Name
-    document.getElementsByClassName('swim');
-//There is only one element on the page that has the class name of swim, but a node list
-//(with a length of 1) will still be returned:
-//.length determine the number of element that you use in the classe
-    document.getElementsByClassName('swim').length;
-    document.getElementsByClassName('walk').length;
- 0
-//To access the paragraph element node, we use the index notation to refer to the first
-//element in the collection:
-swim = document.getElementsByClassName('swim')[0];
-  clas ='swim'
-   
-//The className Property
+    let  table = document.createElement('table');
+    
+    let  row = document.createElement('tr');
+        let  column1 = document.createElement('th');
+        let  column2 = document.createElement('th');
+        let  column3 = document.createElement('th');
 
-//Classes of an Element
- // className property that allows the class of an element to be set
-//directly. In addition, it can be used to find out the value of the class attribute:
+        column1.innerHTML = 'Name';
+        column2.innerHTML = 'Height';
+        column3.innerHTML = 'Place';
 
-    swim.className;
-    'swimming'
-//We can change the class back to swim with the following code:
+        row.appendChild(column1);
+        row.appendChild(column2);
+        row.appendChild(column3);
 
-    swim.className = 'swim'
-    'swim'
+        table.appendChild(row);
+        
+  
+    for (let i = 0; i < MOUNTAINS.length; i++) {
 
-//The classList Property
-//The classList property is a list of all the classes an element has. It has a number of
-//methods that make it easier to modify the class of an element. It’s supported in all modern
-//browsers and in Internet Explorer from version 10 onwards.
-//The add method works in a similar way to the addClass function we created above, and
-//can be used to add a class to an element. For example, we could add a class of “sport” to
-//the run element:
-    run.classList.add('run');
+        let name = MOUNTAINS[i].name;
+        let height = MOUNTAINS[i].height;
+        let place = MOUNTAINS[i].place;
 
-//The remove method will remove a specific class from an element. For example, we could
-//remove the class of “swim” from the swim element:
-    swim.classList.remove('swim');
+        let  row = document.createElement('tr');
+        let  column1 = document.createElement('td');
+        let  column2 = document.createElement('td');
+        let  column3 = document.createElement('td');
 
+        column1.innerHTML = name;
+        column2.innerHTML = height;
+        column3.innerHTML = place;
 
-    swim.classList.toggle('sport'); // will remove the ‘sport’ class false
-    swim.classList.toggle('sport'); // will add the ‘sport’ class back
-    true
-//The contains method will check to see if an element has a particular class:
-    swim.classList.contains('sport');
-    true
-    swim.classList.toggle('sport');
-    false
-    swim.classList.contains('sport');
-    false
+        row.appendChild(column1);
+        row.appendChild(column2);
+        row.appendChild(column3);
 
+        table.appendChild(row);
+    }
+    let div = document.getElementById('mountains');
+    div.appendChild(table);
 
+    </script>
 
-//: Adding Classes in Old Versions of Internet Explorer
-    function addClass(element,newClass){
-        if (element.className) {
-        element.className = swim.className +  '' + newClass;
-        } else {
-        element.className = newClass;
-        }
-        return element.getAttribute('class');
-        }
- 
-//creating element
-    var newPara = document.createElement('p');
-//Creating a Text Node
-    var text = document.createTextNode('Transition 1');
-//Appending Nodes
-    newPara.appendChild(text);
-    function createElement (tag,text) {
-    el = document.createElement(tag);
-    el.textContent = text;
-return el
-}
-//Query Selectors
-/*The document.querySelector() method allows you to use CSS notation to find the first
-element in the document that matches a CSS query selector criteria provided as an
-argument. If no elements match, it will return null.
-The document.querySelectorAll() method also uses CSS notation but returns a node list
-of all the elements in the document that match the CSS query selector. If no elements
-match, it will return an empty node list.
-These are both very powerful methods that can emulate all the methods discussed, as well
-as allowing more fine-grained control over which element nodes are returned.*/
-
-//For example
-bike = document.querySelector('#bike');
- id='bike'
-//this could be used instead of 'document.getElementsByClassName'
-/*The document.querySelectorAll() method also uses CSS notation but returns a node list
-of all the elements in the document that match the CSS query selector. If no elements
-match, it will return an empty node list.*/
-//difference between .querySelector() and.querySelectorAll()
-//.querySelector():return first node,it doesn't matter how many nodes you have 
-//.querySelectorAll(): return all nodes (class, tag , id ...)
+</body>
+<footer>
+  &copy; 2022 | Portfolio | Alain Solohery
+</footer>
 
 
-/*
-
-the main goal of this chapter is to interact and change or modify 
-the html document that is to be displayed (rendered) on the web browser.
-In one word .querlySelector(), and .querySelectorAll() are
-very power over .getElementById(), getElementtagName(),getElementClassName()
-
-
-*/
-
-
-//Events
-
-//Events are another part of the DOM API and they are what provides the link between the
-//web page and user interactions. Every time a user interacts with a web page, such as
-//clicking on a link, pressing a key, or moving a mouse, an event occurs that our program
-//can detect and then respond to
-
-//In my own word :Events is the way how user interact with html 
-//example user touche the mouse and act(click) upon it after that the user take its own decision if he is going to act or not 
-
-
-/* Event listeners in JavaScript work in much the same way. They are like setting a
-notification to alert you when something happens
-s. Instead of the program having to
-constantly check to see if an event has occurred, the event listener will let it know when
-the event happens and the program can then respond appropriately. The program can get
-on with the tasks while it waits for the event to happen.
-For example, say in your program you want something to happen when a user clicks on
-the page. The code to check if a user has clicked might look like this example (JavaScript
-doesn’t actually work like this, so this code would fail to work, although it is the way
-some applications work):*/
-if (click) {
-doSomething();
-} else;
-
-document.body.addEventListener('click', function(){
-alert('You Clicked!')
-}) 
-/*In this  example, the event listener has been added to the document’s
-body element. It will call the function doSomething when any part of the page is clicked */
-
-// inline event attributes
-//this means that you interact at the html markup 
-// example <p onclick='console.log(‘You Clicked!')>Click Me</p>
-
-//event listner this means you interact at JavaScript
-
-
-/*The addEventListener() method is called on a node object, the node to which the event
-listener is being applied. This code will attach an event listener to the
-document’s body:*/
-
-//Example 
-document.body.addEventListener('click',doSomething);
-
-
-</script>
 </html>
+
+

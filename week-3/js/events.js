@@ -1,16 +1,4 @@
-let p = document.getElementById('click');
-let p1 = document.getElementById('dblclick');
-let p2 = document.getElementById('mouse');
-
-
-function doSomething(){
-    console.log('Something Happened!');
-    }
-    p.addEventListener('click', doSomething);
-    p1.addEventListener('dbclick', doSomething);
-    p2.addEventListener('mouse', doSomething);
-
-    /*Event Handling*/
+/*Event Handling*/
 document.onclick = function (){ console.log('You clicked on the page!'); } // the older way of handling the event of onclick
 document.body.addEventListener('click',doSomething); // without a node it is a global object (the whole window)
 addEventListener('click', () => alert('You Clicked!')); // same without a node (whole page) with an anonymous function

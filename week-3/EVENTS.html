@@ -1,17 +1,37 @@
 <!doctype html>
-<html lang=“en”>
+<html lang="en">
 <head>
-<meta charset=“utf-8”>
-<title>Events Examples</title>
-<link rel=“stylesheet” href=“css/styles.css”>
+<meta charset="utf-8">
+<title>Events Examples(Chap 7)</title>
+<link rel="stylesheet" href="css/event.css">
 </head>
 <body>
+<div class="mainlist">
+    <ul id='list'>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
 <p id='click'>Click On Me</p>
 <p id='dblclick'>Double Click On Me</p>
 <p id='mouse'>Hover On Me</p>
+<p id='once'>Stopping Default Behavior</p>
+<p>
+    <a id='broken' href='https://sitepoint.com'>Broken Link</a>
+</p>
+
+
+</div>
+<script src='events.js'></script>
+</body>
+
+
+
+
+
 <script src='js/scripts.js'></script>
 
-<p>Summary
+<!--<p>Summary
     In this chapter, we have learned the following:
     Events occur when a user interacts with a web page.
     An event listener is attached to a node, watches for an event to happen and then
@@ -25,8 +45,12 @@
     function.
     Event propagation is the order that the events fire on each element.
     Event delegation is when an event listener is added to a parent element to capture
-    events that happen to its children elements.</p>
+    events that happen to its children elements.</p>-->
 </body>
+
+<footer class="mainfooter">
+    &copy; 2022 | Portfolio | Alain Solohery
+</footer>
 
 
 </html>

@@ -8,4 +8,14 @@ p {
     .highlight{
     background-color: red;
     }
+#list{
+text-align: left;
+    
+}
+    
+    .mainfooter{
+        margin-top: 300px;
+
+        text-align: left;
+    }
     
