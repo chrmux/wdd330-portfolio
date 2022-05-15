@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+input {
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-color: cornsilk;
+}
+
+input:required {
+    background-image: none;
+}
+
+
+.oop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
