@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Russo+One&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/week04.css">
+    <title>Week-3</title>
+   
+   
+   
+</head>
+<body>
+    <header>
+        <h1>Week 4(notes and work)</h1>
+        <h2>Reading from Chapter 8</h2>
+        <h3>Form and JavaScript</h3>
+        <p>Forms are required to take input from the user who visits the website. This form is used basically for the registration process, logging into your profile on a website or to create your profile on a website, etc … The information that is collected from the form is -1. Name 2.Email Addresses etc. Now the form will take input from the form and post that data in backend applications (like PHP). So the backend application will process the data which is received by them. 
+        There are various form elements that we can use like text fields, text area, drop-down list, select, checkboxes, radio, etc.</p>
+        <!--<form> Form Content... </form>-->
+
+        <h3>In chapter 8</h3>
+<p>Form controls</p>
+<p>All the attribute necessary to the html forms which <br>
+> input fields(could have form-specific attributes most are Boolean attributes :name ,value,checked, 
+maxlength,minlenght,placeholder,autofocus,required,pattern.min,max,step...)including "text", "passwords", "check boxes", "hidden"
+radio buttons,  textarea,and file uploads
+> select - menus for drop-down lists of options
+> textarea - elements for longer text entry
+> button - elements for submitting and resetting forms
+Accessing form elements
+Form properties and methods
+Form events
+Submitting a form
+Retrieving and changing values from a form
+Form validation
+there are also the native input assistance and validation without any javaScriptcode include<br>
+email, tel, url, search, number, range, date,month,week ,time, color </p>
+
+
+<form name='search' action='/search'>
+    <input name='searchInput'>
+    <button type='submit' name="submit">Search</button>
+    <!-- other ways to submit forms below 
+<input type='submit' value='Submit'>
+<input type='image' src='button.png'> -->
+    <!-- <button type='reset'>Reset</button>  -->
+    <label for='donation-amount'>Enter amount to donate:
+        <input type='text' id='donation-amount' name='donationAmount' value='10'>
+    </label>
+
+</form>
+</div>
+<div>
+<h2>Forms</h2>
+<form id="register" method="post">
+    <header>
+        <h1>Enregister's Form</h1>
+        <p>
+            Please fill the Form
+        </p>
+    </header>
+    
+      
+            <label for="register-name">Name</label>
+            <input type="text" id="register-name" name="name" required aria-required="true">
+      
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+      
+        <label for="favcolor">Hubby</label>
+      
+            <input type="color" list="colors" id="favcolor" name="favcolor">
+            <datalist id="colors">
+                <option value="#0000FF" label="reading">
+                <option value="#008000" label="camping">
+                <option value="#ff0000" label="sport">
+                <option value="#663399" label="traveling">
+            </datalist></li>
+        
+            <label for="url">website</label>
+            <input type="url"at: id="url" name="url">
+       
+            <label for="password">password</label>
+            <p>(at least 6 characters, no spaces)</p>
+            <input type="password" id="password" name="password" required
+                title="(at least 6 characters, no spaces)" pattern="\S{6,}">
+       
+            <label for="rating">On a scale of 1 to 10, my knowledge of HTML5 is:</label>
+            <input name="rating" type="range" min="1" max="10" step="1">
+       
+            <label for="startdate">Please start my subscription on:</label>
+            <input type="date" min="1904-03-17" max="1904-05-17" id="startdate" name="startdate" required
+                aria-required="true" placeholder="1904-03-17">
+        
+            <label for="quantity">I would like to receive
+                <input type="number" min="1" name="quantity" id="quantity"> copies of
+                <cite> The HTML5 Herald</cite></label>
+        
+            <label for="upsell">Also sign me up for <cite>The CSS3 Chronicle</cite></label>
+            <input type="checkbox" id="upsell" name="upsell" value="CSS Chronicle">
+        
+            <input type="submit" id="register-submit" value="Send Post Haste">
+  
+        <label for="clr">Color: </label>
+        <input id="clr" name="clr" type="color" placeholder="#ffffff" pattern="#(?:[0-9A-Fa-f]{6})">
+    </li>
+</form>
+<form id="search" method="get">
+    <label for="s">Search</label>
+    <input type="search" id="s" name="s">
+    <input type="submit" value="Search">
+</form>
+</div>
+</div>
+
+
+    <h3>Summary Chapter8</h3>
+    <p>Summary
+        In this chapter, we have learned the following:
+        Forms are the primary method used for entering data into a browser.
+        Forms have a variety of controls that are used for entering different types of
+        information.
+        HTML5 has a large number of new input types that are beginning to be implemented
+        in modern browsers.
+        document.forms will return an HTML collection of all the forms on a page.
+        form.elements will return an HTML collection of all the elements contained within a
+        form.
+        Forms have focus, blur, and change events that fire as a user interacts with the form.
+        Forms also have a submit event that can be used to intercept a form before it has
+        been submitted.
+        The information entered into a form can be read or updated using the value property
+        of the form controls.
+        The HTML5 form validation API can be used to automatically validate a form, but
+        only at a basic level, so a custom validation script may be required.</p><br>
+        <h3>Summary Chapter8</h3>
+        <p>Object-oriented programming (OOP) is a way of programming that uses objects as
+            building blocks.
+            The main concepts of OOP are encapsulation, polymorphism, and inheritance.
+            Constructor functions can be used to create instances of objects.
+            Inside a constructor function, the keyword this refers to the object returned by the
+            function.
+            All instances of a constructor function inherit all the properties and methods of its
+            prototype object.
+            The prototype object is live, so new properties and methods can be added to existing
+            instances.
+            The prototype chain is used to find an available method. If an object lacks a method,
+            JavaScript will check whether its prototype has the method; if not, it will check that
+            function’s prototype until it finds the method or reaches the Object constructor
+            function.
+            Private properties and methods can be created by defining variables using var and
+            defining a function inside a constructor function. These can be made public using
+            getter and setter functions.
+            Monkey-patching is the process of adding methods to built-in objects by augmenting
+            their prototype objects. This should be done with caution as it can cause unexpected
+            behavior in the way built-in objects work.
+            A mixin method can be used to add properties and methods from other objects
+            without creating an inheritance chain.
+            Methods can be changed together and called in sequence if they return a reference to
+            this.
+            Polymorphism is when the same method is used by two unique objects in different
+            ways.
+            The value of this is not retained inside nested functions, which can cause errors.
+            This can be worked around by using that = this or using the bind(this) method.
+            Methods can be borrowed from objects.
+            In the next chapter, we’ll be looking at how to send and receive data using JavaScript.
+            </p>
+
+        <h3>Summary chapter15</h3>
+        <p>A framework is a JavaScript library of code that provides methods to make common
+            tasks easier to achieve.
+            Frameworks can make programming much easier, but you should think carefully
+            about whether you require a framework and which one is best for your needs.
+            A module is a self-contained piece of code that provides functions and methods that
+            can then be used in other files.
+            JavaScript does not support modules, but there are patterns available that can mimic
+            them.
+            CommonJS Modules and AMD modules are two popular module patterns.
+            CommonJS modules are used by npm while AMD Modules are used by RequireJS.
+            Browserify and Bower are two popular package managers that can be used to install
+            modules and frameworks, as well as manage dependencies.
+            The MVC pattern is used to organize code into distinct sections that are responsible
+            for different elements of an application.
+            Template files can be used to separate view code from JavaScript; they also enable
+            dynamic code and programming logic to be inserted into the markup.
+            Minification is the process of removing any redundant characters from the code in
+            order to reduce its file size.
+            Files can be compressed on the server using the gzip compression tool.
+            A task runner can be used to automate common tasks such as minifying code, running
+            tests, and concatenating multiple files into one.
+            Grunt and Gulp are two of the most popular task runners whose approaches slightly
+            differ, but which both have a large amount of plugins for automating common tasks.
+            Before code is deployed it should be concatenated into a single file, minified, and
+            compressed. The script tag should be placed just before the closing </body> tag to
+            ensure that all elements on the page have loaded before the script runs</p>
+
+
+
+        
+           
+         <a href="../index.html">Back to Index</a>
+         <hr>
+        </header>
+        <h2>Starting notes in javaScript </h2>
+        <br>
+        <a  href="week04.html">Note week4 </a>
+        <br>
+        <a  href="supers.html">Super Hero</a>
+        <br>
+        <a  href="teamwork.html">Note</a>
+        <a  href="quizNinja.html">Note</a>
+    
+   
+ <script src="js/week04.js"></script>
+</body>
+<footer>
+    &copy; 2022 | Portfolio | Alain Solohery
+</footer>
+
+
+</html>
