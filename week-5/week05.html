@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Russo+One&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/week05.css">
+    <title>Week-5</title>
+   
+    <script>
+        function displayDate() {
+          document.getElementById("date").innerHTML = Date();
+        }
+      </script>
+   
+</head>
+<body>
+    <header>
+        <div class="week5">
+        <h1>Week 5(notes and work)</h1>
+        <div class="reading">
+        <h2>Reading from Chapter 10</h2>
+        <h3>Errors</h3>
+        <p>Human made error , programming is used by Human, it therefore makes error. there are many ways that may occur the errors but ftollowing are mostly
+            <br><strong>system error</strong>―there is problem with the system or external devices with which the
+            program is interacting
+            <br>
+            <strong>programmer error</strong>―the program contains incorrect syntax or faulty logic.; it could
+            even be as simple as a typo<br>
+            <strong>User error</strong>―the user has entered data incorrectly that the program is unable to handle<br>
+            In JavaScript when errors happen, when you test it with browser. <br>It will end the program immediately <br>
+            <strong>  The good one that in javaScript is that it will warn before performing 
+            JavaScript will also show a warning <br>if there is an error in the code that fails to stop the
+            program from running. <br>This means that the program will continue to run after a warning;<br>
+            this can be problematic, though, since the issue that produced the warning may cause the
+            program to run incorrectly.</strong><br>
+            example:
+            pi = 3.142;<br>
+            << JavaScript Warning: assignment to undeclared variable
+
+        </p>
+        <h3>Warning</h3>
+        <p>JavaScript will act and  show a warning if there is an error in the code that fails to stop the
+            program from running. This means that the program will continue to run after a warning;
+            this can be problematic, though, since the issue that produced the warning may cause the
+            program to run incorrectly.
+            </p><br>
+        </div>
+    <div class="testing">
+            <h3>Testing</h3>
+            <p>Testing has a very primary objective to find effects .It evaluates the code and find error</p>
+            <h3>Debugging</h3>
+            <h3>Difference between Testing and Debugging</h3>
+            <p>Testisting deals with finding defect while debugging  deals with analyzing the reported issue getting into the root cause of it
+                and resolve it </p><br>
+            
+                <h3>Strict Mode</h3>
+                <p>The syntax of view strict is a pragma that tells the browser to change the way  they execute Javascript .It helps users to write and safe code which will
+                    approach the user to make less mistake<br>It
+                    eliminates some JavaScript silent errors by changing them to throw errors.
+                    Fixes mistakes that make it difficult for JavaScript engines to perform optimizations <br>
+                    Strict mode simply requires the following string to be added to the first line of a JavaScript file:
+                                            <strong>“use strict”;</strong>
+
+                                            function strictly(){
+                                                “use strict”;
+                                                }
+                                                
+                    </p>
+                    <h3>Linting Tools</h3>
+                    Linting tools such as JS Lint, JS Hint, and ES Lint can be used to test the quality of
+                    JavaScript code, beyond simply using strict mode. They are designed to highlight any
+                    sloppy programming practices or syntax errors.
+        
+        <h3>Exception</h3>
+        <p>Exception
+            Runtime errors, also called exceptions, occur during execution (after compilation/interpretation).It is abnormal condition which occur during teh execution of 
+            a program,it dirupts normal flow of the program.<br>
+            It also produces a return value that can be used by the program to deal with the error
+            A Stack trace is a list of the method calls that the application was in the middle of when an Exception was thrown.<br>- 
+            Warnings - warning can occur if there’s an error in the code that isn't enough to cause the program to crash
+            -- this can be a problem if the program runs incorrectly but still runs
+            Because it is loosely typed some errors can slip through the code, you can enforce a strict mode -> 'use strict';
+            -- this will make it throw an exception instead of a warning (if the engine will accept the mode)
+            In can be used in a function or a strict function that will run the whole program code.</p>
+
+            <h3>Debugging in the browser</h3> 
+            Here where we check if the things are running properly when they are implemented<br>
+            
+            function amIOldEnough(age){<br>
+                alert(age);
+                if (age < 12) {<br>
+                return “No, sorry.”;
+
+                }<br>
+                 else if (age < 18) {<br>
+                return “Only if you are accompanied by an adult.”;
+                }<br>
+                else 
+                <br>{
+                return “Yep, come on in!”;<br>
+                }
+                }
+            </div>
+        </div>
+
+    <h3>Summary Chapter10</h3>
+    Chapter Summary
+- Novice to Ninja JavaScript
+<p>Bugs are unavoidable in code, and it’s best to find them early rather than later.
+JavaScript can be put into strict mode using the string "use strict" . This can be used in a whole file or just a single function.
+Linting tools can be used to ensure your code follows good practice and conventions.
+Feature detection can check whether a method is supported before calling it, helping to avoid an exception being thrown.
+The console and browser’s built-in debugging tool can be used to interactively find and fix bugs in code.
+Exceptions can be thrown using the throw statement.
+An error object is created when an exception occurs.
+Any code placed inside a try block will pass any error objects to a catch block when an exception occurs. Any code inside a finally block will run if an exception does or does not occur.
+Test-driven development is the practice of writing tests that fail, then writing the code that passes the test, then refactoring the code every time a new feature is implemented</p>
+
+
+        
+           
+         <a href="../index.html">Back to Index</a>
+         <hr>
+        </header>
+        <h2>Starting notes in javaScript </h2>
+        <br>
+        <a  href="week05.html">Note week5 </a>
+        <br>
+        <a  href="todo.html">To do list</a>
+        <br>
+        <a  href="teamwork.html">Team</a>
+      
+    
+   
+ <script src="js/week05.js"></script>
+</body>
+<footer>
+    &copy; 2022 | Portfolio | Alain Solohery
+</footer>
+
+
+</html>

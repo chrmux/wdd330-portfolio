@@ -1,0 +1,19 @@
+.week05{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
+}
+.reading{
+    grid-column: 1;
+    border: 20 px solid grey;
+    background-color: rgb(82, 82, 109);
+}
+
+.testing{
+    grid-column: 2;
+    border: 20 px solid grey;
+    background-color: rgb(92, 84, 84);
+}
+h1, h2, h3, p {
+    text-align: center;
+}
