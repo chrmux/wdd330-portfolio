@@ -1,4 +1,4 @@
- /*----img {
+img {
     max-width: 40%;
     height: 180px;
     float: left;
@@ -22,7 +22,7 @@
 
   }
 
- ----*/
+
   body {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
