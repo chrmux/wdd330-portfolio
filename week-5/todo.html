@@ -47,7 +47,7 @@
            * There are no dates assigned to the board. Assign yourself some due dates to make sure you complete the project in the allotted time. -->
 
     <header>
-        <h2> TODO list</h2>
+        <!--<h2> TODO list</h2>
         <a href='../index.html'>Back to Index</a>
         <hr>
     </header>
@@ -65,8 +65,23 @@
             <li>Reading</li>
             <li>Do assignement</li>
          
-        </ul>
+        </ul>-->
         <!-- tasks left, sort by complete, option to show all -->
+        <div id="myDIV" class="header">
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          
+          <ul id="myUL">
+            <li>Hit the gym</li>
+            <li class="checked">Pay bills</li>
+            <li>Meet George</li>
+            <li>Buy eggs</li>
+            <li>Read a book</li>
+            <li>Organize office</li>
+          </ul>
+          
         <div id='bottomRow'>
             <button id='count'></button>
             <button onclick='tasksLeft();'>Tasks left</button>
