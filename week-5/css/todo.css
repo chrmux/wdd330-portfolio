@@ -1,0 +1,44 @@
+/*ul {
+
+    display: block;
+    
+    width: 100px;
+    height: 200px;
+}*/
+
+.todolist{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid grey;
+    width: 400px;
+    height: 200px;
+}
+.li {
+list-style: none;
+
+
+}
+
+.A input{
+
+
+    margin-right: 200px;
+}
+
+
+.A {
+display: flex;
+flex-direction: row;
+  max-width: 50px;
+  border: 5px solid gray;
+  margin-left: 10px;
+  margin-left:50px;
+ 
+
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    justify-content: space-around;
+}

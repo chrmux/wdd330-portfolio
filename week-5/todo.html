@@ -21,77 +21,33 @@
 
 <body>
 
-    <!-- Over the next 2 weeks we will practice what we have learned so far by building a 
-        small web application. For this first challenge we will all build a simple To Do tracking application.
-
-        Review the details in the simple design document below, then build the application. 
-        This will be due at the end of Week 6. 
-        Details
-        1. Description: Build a simple web app to manage a ToDo list. It should allow the creation of new tasks, 
-        the viewing of tasks, a process to mark tasks as complete, ability to remove tasks, and the ability to filter by complete/not complete.
-        2. Wireframes for each view.
-            Todo app wireframe
-        3. UI actions
-            Show a list of tasks
-            Add a new task
-            Complete a task
-            Remove a task
-            Filter tasks (complete/incomplete)
-        4. Data sources: localStorage
-            todo: { id : timestamp, content: string, completed: bool }
-            toDoList = [toDo];
-        5. Initial Module list: ToDos.js, localStorage helpers (ls.js), utilities.js
-        6. Colors/Typography/specific Element styling: Student to determine
-        7. Schedule to provide yourself mile markers along the way to help you stay on target.
-           * Review this Trello board. If you want to follow those steps, create a Trello account and copy the board to your account.
-           * There are no dates assigned to the board. Assign yourself some due dates to make sure you complete the project in the allotted time. -->
-
     <header>
-        <!--<h2> TODO list</h2>
-        <a href='../index.html'>Back to Index</a>
-        <hr>
-    </header>
-    <div class='container'>
-        <div id='myWork' class='header'>
-            <h2>My To Do List</h2>
-            <div id='inputContainer'><input type='text' id='myInput' placeholder='Todo item...'>
-                <div id='addItem' onclick='newItem()' class='addBtn'>ADD +</div>
-            </div>
-            <p id='warning'>You must write something to add to the list!</p>
+        <div class="todolist">
+        <ul id="MYLIST">
+            <li class="A"> <input type="checkbox"><span>Checkbox</span><button>x</button></li>
+            
+            <li class="A"> <input type="checkbox"><span>Checkbox</span><button>x</button></li>
+           
+            <li class="A"> <input type="checkbox"><span>Checkbox</span><button>x</button></li>
+            
+        </ul>
+        <div class="button"><span>Task</span>
+        <button class="btn1" type="button">Task Left</button>
+        <button class="btn2" type="button">Task All</button>
+        <button class="btn3" type="button">Completed</button>
         </div>
+        <form id=''>
+            <label>
+                <input type='text' id='todoInput' name='' placeholder=''required>
+                    <button type="button" id="addTask">+</button>
+            </label>
+           </form>
+       
+           
 
-        <ul id='myUL'>
-            <li>Go to Work</li>
-            <li>Reading</li>
-            <li>Do assignement</li>
-         
-        </ul>-->
-        <!-- tasks left, sort by complete, option to show all -->
-        <div id="myDIV" class="header">
-            <h2 style="margin:5px">My To Do List</h2>
-            <input type="text" id="myInput" placeholder="Title...">
-            <span onclick="newElement()" class="addBtn">Add</span>
-          </div>
-          
-          <ul id="myUL">
-            <li>Hit the gym</li>
-            <li class="checked">Pay bills</li>
-            <li>Meet George</li>
-            <li>Buy eggs</li>
-            <li>Read a book</li>
-            <li>Organize office</li>
-          </ul>
-          
-        <div id='bottomRow'>
-            <button id='count'></button>
-            <button onclick='tasksLeft();'>Tasks left</button>
-            <button onclick='showComplete();'>Completed</button>
-            <button onclick="showAll();">Show All</button>
-        </div>
-        <p id="display"></p>
-    </div>
+        
 
-    <script src="js/todo.js"></script>
+    <script src="js/utilities.js"></script>
 </body>
 
 
