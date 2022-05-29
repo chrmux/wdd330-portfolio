@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Russo+One&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/week04.css">
+  
     <title>Week-5</title>
     
   
@@ -21,33 +21,28 @@
 
 <body>
 
+
     <header>
-        <div class="todolist">
-        <ul id="MYLIST">
-            <li class="A"> <input type="checkbox"><span>Checkbox</span><button>x</button></li>
-            
-            <li class="A"> <input type="checkbox"><span>Checkbox</span><button>x</button></li>
-           
-            <li class="A"> <input type="checkbox"><span>Checkbox</span><button>x</button></li>
-            
+        <div class='todolist' onmousemove="countToDo();">
+        <ul id='MYLIST'>
+            <p id='exit'></p>
         </ul>
-        <div class="button"><span>Task</span>
-        <button class="btn1" type="button">Task Left</button>
-        <button class="btn2" type="button">Task All</button>
-        <button class="btn3" type="button">Completed</button>
-        </div>
-        <form id=''>
-            <label>
-                <input type='text' id='todoInput' name='' placeholder=''required>
-                    <button type="button" id="addTask">+</button>
+        <div id='inputContainer'>
+            <label for="">
+                <input type="text" id='todoInput' placeholder='type your list'>
+                <button id='addTask' onclick='newItem()' class='addBtn'>+ADD</button>
             </label>
-           </form>
-       
-           
+        </div>
+    </div>
+    <div id='buttom'>
+        <button id='count'></button>
+        <button onclick='tasksLeft();'>Task left</button>
+        <button onclick="showAll();">Task All</button>
+        <button onclick='showComplete();'>Completed</button>
 
-        
-
-    <script src="js/utilities.js"></script>
+    </div>
+    <p id="container"></p>
+<script src="js/todo.js"></script>
 </body>
 
 

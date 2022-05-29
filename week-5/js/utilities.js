@@ -2,7 +2,7 @@
 
 function displayNewTask(task) {
     let li = document.createElement("li");
-    li.classList.add('A');
+    li.classList.add('addList');
 
     let input = document.createElement("input");
     input.type = "checkbox";
@@ -73,6 +73,52 @@ for (let i = 0; i < cross.length; i++) {
     // div.id = 'complete';
   }
 }
+function remove() {
+  del.addEventListener('click', (e) => {
+    storage.delete(task);
+    printTodos();
+
+    todos.push(task);
+    localStorage.removeItem('todos', JSON.stringify(todos));
+
+});
+    
+}
+
+
+
+
+  
+  
+//function addTodo() {
+  //var inputValue = document.getElementById('todoInput').value;
+ // const task = {
+  //    checked: false,
+  //    text: inputValue,
+  //    id: Date.now()
+ // }    
+//}
+
+/*const task_List = document.querySelector('.collection');
+task_List.addEventListener('click',removeTask);
+
+function removeTask(e){
+    if(e.target.parentElement.classList.contains('delete-item')){
+        if(confirm("Are you sure?")){
+            e.target.parentElement.parentElement.remove();
+        }
+    }
+}
+
+/*const clearBtn = document.querySelector('.btn');
+clearBtn.addEventListener('click', clearTasks);
+
+function clearTasks(){
+    const taskList = document.querySelector('.collection');
+    taskList.innerHTML= '';
+}
+
+
 // var abc = [];
 //    var get =  JSON.parse(localStorage.getItem('todos'));
 //    todos = [get];
@@ -83,3 +129,5 @@ for (let i = 0; i < cross.length; i++) {
 //    console.log(JSON.stringify(todos));
 //    console.log(get);
   
+
+*/
