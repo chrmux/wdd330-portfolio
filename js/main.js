@@ -22,7 +22,7 @@ const links = [
     },
     {
     label: "Week6 notes",
-    url: "week-6/week06.html"
+    url: "week-6/tpdoweek06.html"
   },
 
   ];
