@@ -113,4 +113,4 @@ class CommentModel {
     }
   }
   
-  export default comments;
+  export default Comments;
