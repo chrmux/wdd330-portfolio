@@ -112,4 +112,4 @@ class CommentModel {
       }
     }
   }
-  
+export default Comments;
