@@ -75,11 +75,11 @@ h2 {
 }
 
 h3 {
-    padding-left: 30px;
+   /* padding-left: 30px;
 }
 
 p {
-    padding-left: 40px;
+    padding-left: 40px;*/
 }
 
 ol{
@@ -96,7 +96,5 @@ strong {
 }
 main{
     padding: 10px;
-}
-div h3, div p{
-    padding-left: 40px;
+
 }
