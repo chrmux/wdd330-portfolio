@@ -74,8 +74,8 @@ h2 {
     padding-left: 10px;
 }
 
-h3 {
-    padding-left: 30px;
+h3, p {
+    padding:initial;
 }
 
 p {
