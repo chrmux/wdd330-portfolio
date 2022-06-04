@@ -80,8 +80,7 @@
             function power(x) {<br>
             return function(power) {<br>
             return Math.pow(x,power);<br>
-            }<br>
-            }<br>
+            }}
             Now we can create some more specific functions that use this generic function to build
             them. For example, <br>we could implement a twoExp() function that returns powers of 2, like<br>
             twoExp = power(2);<br>
@@ -103,27 +102,6 @@
             power(3)(5);<br>
             << 243<br>
          </p>
-         
-         <p><!-- this is a function constructor that takes in the comma separated arguments and following is the function - no scope problems here
-            let plusOne = Function("n", "return n + 1;");<br>
-            console.log(plusOne(4));<br>
-            // → 5<br>
-            *****************************<br>
-            function greeter(greeting = 'Hello') {<br>
-            return function() {<br>
-            console.log(greeting);<br>
-            }<br>
-            }<br>
-            const englishGreeter = greeter();<br>
-            englishGreeter();<br>
-            // Hello<br>
-            const frenchGreeter = greeter('Bonjour');<br>
-            frenchGreeter();<br>
-            // Bonjour<br>
-            const germanGreeter = greeter('Guten Tag');<br>
-            germanGreeter();<br>
-            // Guten Tag
-         </p>-->
       </div>
       <div class="callbacks">
          <h3>Callbacks</h3>
@@ -138,7 +116,18 @@
             //we gonna make connection in between two functions<br>
             one(two)
          </p>
-         
+         <h3>Recursive Functions</h3>
+         <p>A recursive function is one that invokes itself until a certain condition is met.<br>
+
+            function factorial(n) {<br>
+               if (n === 0) {<br>
+               return 1<br>
+               } else {<br>
+               return n * factorial(n - 1);<br>
+               }
+               }
+            
+         </p>
          <h3>Closure</h3>
          <p>A closure is a block of code that can be referenced (and passed around)
             with access to the variables of the enclosing scope.
@@ -157,6 +146,17 @@
             console.log(sayHi('John')); // Hi John<br>
             console.log(sayHello('John')); // Hello John<br>
          </p>
+         <h3>Currying</h3>
+         <p>Currying is a process that involves the partial application of functions<br>
+         <p>function multiplier(x,y) {<br>
+            if (y === undefined) {<br>
+            return function(z) {<br>
+            return x * z;<br>
+            }<br>
+            } else {<br>
+            return x * y;<br>
+            }<br>
+            }</p>
       </div>
       <div class="ajax">
          <h3>Summary chp 11</h3>
@@ -194,21 +194,21 @@
          </p>
       </div>
          <div class="summaryChp13">
-         <h3>Summary Chapter13</h3>
-         <p >
-            AJAX is not a programming language.<br>
-            AJAX is a technique for accessing web servers from a web page.<br>
-            AJAX stands for Asynchronous JavaScript And XML.<br>
-            Ajax is a technique for sending and receiving data asynchronously in the background.<br>
-            The data can be sent in many forms, but it is usually inJSON.<br>
-            Ajax can be used for making partial page updates without having to do a full pagereload.<br>
-            Ajax can be used for communicating with external APIs.<br>
-            Ajax requests are made using instances of the XMLHttpRequest object.<br>
-            Requests can receive data using a GET request or send data using a POST request.<br>
-            JSONP or JSON with Padding is a technique used to bypass the same-origin policy.<br>
-            It wraps the response data in a JavaScript callback function that is dynamically inserted
-            the markup.
-         </p>
+               <h3>Summary Chapter13</h3>
+               <p >
+                  AJAX is not a programming language.<br>
+                  AJAX is a technique for accessing web servers from a web page.<br>
+                  AJAX stands for Asynchronous JavaScript And XML.<br>
+                  Ajax is a technique for sending and receiving data asynchronously in the background.<br>
+                  The data can be sent in many forms, but it is usually inJSON.<br>
+                  Ajax can be used for making partial page updates without having to do a full pagereload.<br>
+                  Ajax can be used for communicating with external APIs.<br>
+                  Ajax requests are made using instances of the XMLHttpRequest object.<br>
+                  Requests can receive data using a GET request or send data using a POST request.<br>
+                  JSONP or JSON with Padding is a technique used to bypass the same-origin policy.<br>
+                  It wraps the response data in a JavaScript callback function that is dynamically inserted
+                  the markup.
+               </p>
          </div>
       </div>
       <a href="../index.html">Back to Index</a>

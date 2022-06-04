@@ -47,7 +47,7 @@ input#coreq1Input{
 .chapt11{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  
 }
 .intro{
     grid-column: 1;
@@ -76,10 +76,10 @@ input#coreq1Input{
     background-color: rgb(232, 136, 11);
 }
 
-summaryChp13{
+.summaryChp13{
     grid-column: 3;
     grid-row: 2;
-    background-color: antiquewhite;
+    background-color:rgb(169, 165, 161);
 }
 
 p{
