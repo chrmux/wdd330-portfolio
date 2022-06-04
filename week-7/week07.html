@@ -40,23 +40,23 @@
          <p>Property is a way to get certain relevant information about object likely variable and arrays <br>
             while methode is a way to do something to the data inside the actual container
          </p>
-         var person = {
-         fullName: function() {<br>
-         return this. firstName + "" + this.lastName;<br>
-         }
-         }
-         var personA = {<br>
-         firstName: "John",<br>
-         lastName: "Doe",<br>
-         id: 5566<br>
-         }
-         var personB = {<br>
-         firstName: "David",<br>
-         lastName: "Doe",<br>
-         id: 5577<br>
-         fullName: function() {<br>
-         persnon.fullName.call(personA);<br> 
-         //will return"John Doe"<br>
+            var person = {
+            fullName: function() {<br>
+            return this. firstName + "" + this.lastName;<br>
+            }
+            }
+            var personA = {<br>
+            firstName: "John",<br>
+            lastName: "Doe",<br>
+            id: 5566<br>
+            }
+            var personB = {<br>
+            firstName: "David",<br>
+            lastName: "Doe",<br>
+            id: 5577<br>
+            fullName: function() {<br>
+            persnon.fullName.call(personA);<br> 
+            //will return"John Doe"<br>
          }<br>
          };
          <hr>
