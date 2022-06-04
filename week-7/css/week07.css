@@ -43,3 +43,48 @@ input#coreq1Input{
     text-align:left;
 
 }
+
+.chapt11{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.intro{
+    grid-column: 1;
+    background-color:#d57c0f;
+}
+.functionPropertiesMethodes{
+    grid-column: 2;
+    background-color: rgb(169, 163, 155);
+}
+
+.functionReturnFunction{
+    grid-column: 3;
+    background-color: #d57c0f;
+
+}
+
+.callbacks{
+    grid-column: 1;
+   
+    background-color: rgb(169, 165, 161);
+}
+
+.ajax{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: rgb(232, 136, 11);
+}
+
+summaryChp13{
+    grid-column: 3;
+    grid-row: 2;
+    background-color: antiquewhite;
+}
+
+p{
+    padding: 10px 10px;
+}
+
+
+

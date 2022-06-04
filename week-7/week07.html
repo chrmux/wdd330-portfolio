@@ -13,29 +13,34 @@
    <body>
       <header>
       <h1>Week 7(notes and work)</h1>
-      <h2>Reading from Chapter 11</h2>
-      <h3>What is Functional Programming?</h3>
-      <div class="summary">
-         <p>In JavaScript, functions are first-class objects, which means that they behave the same
-            way as every other value  So they can have their own properties and methods, as well as
-            accepting other functions as parameters and being returned by other functions. This makes
-            them a very flexible tool to work with in JavaScript, and there are a variety of techniques
-            and patterns that can be used to make code cleaner.<br>
-            <strong>Example of a random() function that will return a random integer between two
-            arguments, a and b; if only one argument is supplied, it will return a random number
-            between 1 and that argument’s value:</strong><br>
-            <strong> random(a,b) {<br>
-            if (b === undefined) b = a, a = 1;<br>
-            // if only one argument is<br>
-            supplied, assume the lower limit is 1<br>
-            return Math.floor((b-a+1) * Math.random()) + a;<br>
-            }<br>
-            random(6);<br>
-            << 4<br>
-            random(10,20);<br>
-            << 13</strong>
-         </p>
-         <hr>
+      
+     
+      <div class="chapt11">
+         <div class="intro">
+            <h2>Introduction to functional programming</h2>
+            
+            <p>In JavaScript, functions are first-class objects, which means that they behave the same
+               way as every other value  So they can have their own properties and methods, as well as
+               accepting other functions as parameters and being returned by other functions. This makes
+               them a very flexible tool to work with in JavaScript, and there are a variety of techniques
+               and patterns that can be used to make code cleaner.<br>
+               <strong>Example of a random() function that will return a random integer between two
+               arguments, a and b; if only one argument is supplied, it will return a random number
+               between 1 and that argument’s value:</strong><br>
+               <strong> random(a,b) {<br>
+               if (b === undefined) b = a, a = 1;<br>
+               // if only one argument is<br>
+               supplied, assume the lower limit is 1<br>
+               return Math.floor((b-a+1) * Math.random()) + a;<br>
+               }<br>
+               random(6);<br>
+               << 4<br>
+               random(10,20);<br>
+               << 13</strong>
+            </p>
+            
+      </div>
+      <div class="functionPropertiesMethodes">
          <h3>Function Properties and Methods</h3>
          <p>Property is a way to get certain relevant information about object likely variable and arrays <br>
             while methode is a way to do something to the data inside the actual container
@@ -59,7 +64,9 @@
             //will return"John Doe"<br>
          }<br>
          };
-         <hr>
+         
+      </div>
+      <div class="functionReturnFunction">
          <h3>functions that return functions</h3>
          <p>As functions are first-class objects is that they can accept a function as an argument as
             well as return another function
@@ -67,37 +74,37 @@
             It allows generic higher-order functions to
             be used to return more specific functions based on particular parameters
             <br>
-            Example
+            Example<br>
             . For example, we can create a power() function that returns a function that calculates values to the power of
-            a given parameter:
-            function power(x) {
-            return function(power) {
-            return Math.pow(x,power);
-            }
-            }
+            a given parameter:<br>
+            function power(x) {<br>
+            return function(power) {<br>
+            return Math.pow(x,power);<br>
+            }<br>
+            }<br>
             Now we can create some more specific functions that use this generic function to build
-            them. For example, we could implement a twoExp() function that returns powers of 2, like
-            twoExp = power(2);
-            << function (power) {
-            return Math.pow(x,power);
-            }
-            twoExp(5);
-            << 32
-            We can create another function called tenExp() that returns powers of 10:
-            tenExp = power(10);
-            << function (power) {
-            return Math.pow(x,power);
+            them. For example, <br>we could implement a twoExp() function that returns powers of 2, like<br>
+            twoExp = power(2);<br>
+            << function (power) {<br>
+            return Math.pow(x,power)<br>;
+            }<br>
+            twoExp(5);<br>
+            << 32<br>
+            We can create another function called tenExp() that returns powers of 10:<br>
+            tenExp = power(10);<br>
+            << function (power) {<br>
+            return Math.pow(x,power);<br>
             }
             tenExp(6);
             << 1000000<br>
             If a function returns another function, instead of assigning the returned function to a
             variable then calling it, the returned function can be invoked immediately using double
-            parentheses:
-            power(3)(5);
-            << 243
+            parentheses:<br>
+            power(3)(5);<br>
+            << 243<br>
          </p>
-         <br>
-         <p>// this is a function constructor that takes in the comma separated arguments and following is the function - no scope problems here
+         
+         <p><!-- this is a function constructor that takes in the comma separated arguments and following is the function - no scope problems here
             let plusOne = Function("n", "return n + 1;");<br>
             console.log(plusOne(4));<br>
             // → 5<br>
@@ -116,9 +123,9 @@
             const germanGreeter = greeter('Guten Tag');<br>
             germanGreeter();<br>
             // Guten Tag
-         </p>
-         <br>
-         <hr>
+         </p>-->
+      </div>
+      <div class="callbacks">
          <h3>Callbacks</h3>
          <p>Callbacks is when you nest a function inside another function as an argument<br>
             function one (){<br>
@@ -131,7 +138,7 @@
             //we gonna make connection in between two functions<br>
             one(two)
          </p>
-         <hr>
+         
          <h3>Closure</h3>
          <p>A closure is a block of code that can be referenced (and passed around)
             with access to the variables of the enclosing scope.
@@ -150,9 +157,32 @@
             console.log(sayHi('John')); // Hi John<br>
             console.log(sayHello('John')); // Hello John<br>
          </p>
+      </div>
+      <div class="ajax">
          <h3>Summary chp 11</h3>
-         <br>
-         <p>What is Ajax?</p>
+         <p>Functional programming involves breaking processes down into steps that can be
+            applied as a series of functions.
+            Functions can return other functions.
+            Functions have built-in properties such as length, but can have custom properties
+            added.
+            All functions have call() and apply() methods that can be used to apply the
+            function to different objects.
+            A callback is a function that’s provided as an argument to another function. They can
+            be used to create event-driven asynchronous code that enables a program to continue
+            running while waiting for an event to happen.
+            A closure is the process of keeping a reference to a variable available outside the
+            scope of the function it was originally defined in.
+            Immediately Invoked Function Expressions or IIFEs are functions that are enclosed
+            in parentheses and immediately followed by double parentheses so that they’re
+            invoked. They are useful for setting default values.
+            Functions are able to dynamically redefine themselves in the body of the function,
+            depending on certain conditions.
+            A recursive function will keep invoking itself until a certain condition is met.
+            Currying or partial application is the process of applying one argument at a time to a
+            function. A new function is returned until all the arguments have been used.
+            </p>
+      
+         <H1>What is Ajax?</H1>
          <p> <strong>AJAX stands for  ASYNCHRONOUS JAVASCRIPT AND XML</strong><br>
             Ajax is a technique that allows web pages to communicate asynchronously with a server
             and dynamically updates web pages without reloading. This enables data to be sent and
@@ -162,6 +192,8 @@
             of a web page without reloading the whole page.Basically, what Ajax does is make use of the browser's 
             built-in XMLHttpRequest (XHR) object to send and receive information to and from a web server asynchronously, in the background, without blocking the page or interfering with the user's experience.
          </p>
+      </div>
+         <div class="summaryChp13">
          <h3>Summary Chapter13</h3>
          <p >
             AJAX is not a programming language.<br>
@@ -177,6 +209,7 @@
             It wraps the response data in a JavaScript callback function that is dynamically inserted
             the markup.
          </p>
+         </div>
       </div>
       <a href="../index.html">Back to Index</a>
       <a  href="teamwork.html">TeamWork</a>
