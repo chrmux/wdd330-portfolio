@@ -37,3 +37,9 @@ input#coreq1Input{
 }
 
 
+.summary{
+    padding-right: 50px;
+    padding-left: 10px;
+    text-align:left;
+
+}

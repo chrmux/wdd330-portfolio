@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Russo+One&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/week07.css">
-    <title>Week-7</title>
-   
-   
-   
-</head>
-<body>
-    <header>
-        <h1>Week 7(notes and work)</h1>
-        <h2>Reading from Chapter 11</h2>
-        <h3>What is Functional Programming?</h3>
-        <p>In JavaScript, functions are first-class objects, which means that they behave the same
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/week07.css">
+      <title>Week-7</title>
+   </head>
+   <body>
+      <header>
+      <h1>Week 7(notes and work)</h1>
+      <h2>Reading from Chapter 11</h2>
+      <h3>What is Functional Programming?</h3>
+      <div class="summary">
+         <p>In JavaScript, functions are first-class objects, which means that they behave the same
             way as every other value  So they can have their own properties and methods, as well as
             accepting other functions as parameters and being returned by other functions. This makes
             them a very flexible tool to work with in JavaScript, and there are a variety of techniques
@@ -27,175 +24,166 @@
             <strong>Example of a random() function that will return a random integer between two
             arguments, a and b; if only one argument is supplied, it will return a random number
             between 1 and that argument’s value:</strong><br>
-        <strong> random(a,b) {<br>
-                    if (b === undefined) b = a, a = 1;<br>
-                 // if only one argument is<br>
-                    supplied, assume the lower limit is 1<br>
-                    return Math.floor((b-a+1) * Math.random()) + a;<br>
-                    }<br>
-                    random(6);<br>
-                    << 4<br>
-                    random(10,20);<br>
-                    << 13</strong></p>
-                    <hr>
-     
-        <h3>Function Properties and Methods</h3>
-<p>Property is a way to get certain relevant information about object likely variable and arrays <br>
-while methode is a way to do something to the data inside the actual container</p>
-var person = {
-    fullName: function() {<br>
-        return this. firstName + "" + this.lastName;<br>
-    }
-}
-var personA = {<br>
-    firstName: "John",<br>
-    lastName: "Doe",<br>
-    id: 5566<br>
-    }
-
-    var personB = {<br>
-        firstName: "David",<br>
-        lastName: "Doe",<br>
-        id: 5577<br>
-    fullName: function() {<br>
-      persnon.fullName.call(personA);<br> 
-      //will return"John Doe"<br>
-       }<br>
-    };
-  <hr>
-            <h3>functions that return functions</h3>
-
-<p>As functions are first-class objects is that they can accept a function as an argument as
-    well as return another function
-<br>
-It allows generic higher-order functions to
-be used to return more specific functions based on particular parameters
-<br>
-Example
-. For example, we can create a power() function that returns a function that calculates values to the power of
-a given parameter:
-function power(x) {
-return function(power) {
-return Math.pow(x,power);
-}
-}
-
-Now we can create some more specific functions that use this generic function to build
-them. For example, we could implement a twoExp() function that returns powers of 2, like
-twoExp = power(2);
-<< function (power) {
-return Math.pow(x,power);
-}
-twoExp(5);
-<< 32
-We can create another function called tenExp() that returns powers of 10:
-tenExp = power(10);
-<< function (power) {
-return Math.pow(x,power);
-}
-tenExp(6);
-<< 1000000<br>
-
-If a function returns another function, instead of assigning the returned function to a
-variable then calling it, the returned function can be invoked immediately using double
-parentheses:
-power(3)(5);
-<< 243
-
-</p> <br>
-<p>// this is a function constructor that takes in the comma separated arguments and following is the function - no scope problems here
-    let plusOne = Function("n", "return n + 1;");<br>
-    console.log(plusOne(4));<br>
-    // → 5<br>
-    *****************************<br>
-    function greeter(greeting = 'Hello') {<br>
-    return function() {<br>
-    console.log(greeting);<br>
-    }<br>
-    }<br>
-    const englishGreeter = greeter();<br>
-    englishGreeter();<br>
-    // Hello<br>
-    const frenchGreeter = greeter('Bonjour');<br>
-    frenchGreeter();<br>
-    // Bonjour<br>
-    const germanGreeter = greeter('Guten Tag');<br>
-    germanGreeter();<br>
-    // Guten Tag</p><br><hr>
-
-    <h3>Callbacks</h3>
-    <p>Callbacks is when you nest a function inside another function as an argument<br>
-        function one (){<br>
+            <strong> random(a,b) {<br>
+            if (b === undefined) b = a, a = 1;<br>
+            // if only one argument is<br>
+            supplied, assume the lower limit is 1<br>
+            return Math.floor((b-a+1) * Math.random()) + a;<br>
+            }<br>
+            random(6);<br>
+            << 4<br>
+            random(10,20);<br>
+            << 13</strong>
+         </p>
+         <hr>
+         <h3>Function Properties and Methods</h3>
+         <p>Property is a way to get certain relevant information about object likely variable and arrays <br>
+            while methode is a way to do something to the data inside the actual container
+         </p>
+         var person = {
+         fullName: function() {<br>
+         return this. firstName + "" + this.lastName;<br>
+         }
+         }
+         var personA = {<br>
+         firstName: "John",<br>
+         lastName: "Doe",<br>
+         id: 5566<br>
+         }
+         var personB = {<br>
+         firstName: "David",<br>
+         lastName: "Doe",<br>
+         id: 5577<br>
+         fullName: function() {<br>
+         persnon.fullName.call(personA);<br> 
+         //will return"John Doe"<br>
+         }<br>
+         };
+         <hr>
+         <h3>functions that return functions</h3>
+         <p>As functions are first-class objects is that they can accept a function as an argument as
+            well as return another function
+            <br>
+            It allows generic higher-order functions to
+            be used to return more specific functions based on particular parameters
+            <br>
+            Example
+            . For example, we can create a power() function that returns a function that calculates values to the power of
+            a given parameter:
+            function power(x) {
+            return function(power) {
+            return Math.pow(x,power);
+            }
+            }
+            Now we can create some more specific functions that use this generic function to build
+            them. For example, we could implement a twoExp() function that returns powers of 2, like
+            twoExp = power(2);
+            << function (power) {
+            return Math.pow(x,power);
+            }
+            twoExp(5);
+            << 32
+            We can create another function called tenExp() that returns powers of 10:
+            tenExp = power(10);
+            << function (power) {
+            return Math.pow(x,power);
+            }
+            tenExp(6);
+            << 1000000<br>
+            If a function returns another function, instead of assigning the returned function to a
+            variable then calling it, the returned function can be invoked immediately using double
+            parentheses:
+            power(3)(5);
+            << 243
+         </p>
+         <br>
+         <p>// this is a function constructor that takes in the comma separated arguments and following is the function - no scope problems here
+            let plusOne = Function("n", "return n + 1;");<br>
+            console.log(plusOne(4));<br>
+            // → 5<br>
+            *****************************<br>
+            function greeter(greeting = 'Hello') {<br>
+            return function() {<br>
+            console.log(greeting);<br>
+            }<br>
+            }<br>
+            const englishGreeter = greeter();<br>
+            englishGreeter();<br>
+            // Hello<br>
+            const frenchGreeter = greeter('Bonjour');<br>
+            frenchGreeter();<br>
+            // Bonjour<br>
+            const germanGreeter = greeter('Guten Tag');<br>
+            germanGreeter();<br>
+            // Guten Tag
+         </p>
+         <br>
+         <hr>
+         <h3>Callbacks</h3>
+         <p>Callbacks is when you nest a function inside another function as an argument<br>
+            function one (){<br>
             console.log("step 1. please call step 2");<br>
             call_two()<br>
-         }
-
-        function two(){<br>
+            }
+            function two(){<br>
             console.log('step 2');<br>
-
-        }<br>
-        //we gonna make connection in between two functions<br>
-        one(two);
-
-    </p>
-<hr>
- 
-    <h3>Closure</h3>
-
-
-        <p>A closure is a block of code that can be referenced (and passed around)
-        with access to the variables of the enclosing scope.
-        A closure is a function that references variables in the outer scope from its inner scope. The closure preserves the outer scope inside its inner scope.
-
-        To understand the closures, you need to know how the lexical scoping works first.</p><br>
-             <p>Example<br>
-                function greeting(message) {<br>
-                    return function(name){<br>
-                         return message + ' ' + name;<br>
-                    }<br>
-                 }<br>
-                 let sayHi = greeting('Hi');<br>
-                 let sayHello = greeting('Hello');<br>
-                 
-                 console.log(sayHi('John')); // Hi John<br>
-                 console.log(sayHello('John')); // Hello John<br>
-             </p>
-
-
-
-
-    <h3>Summary chp 11</h3><br>
-        
-       </p><br>
-        
-        <h3>Summary Chapter13</h3>
-
-        <p></p>
-
-        
-
-
-        
-           
-         <a href="../index.html">Back to Index</a>
+            }<br>
+            //we gonna make connection in between two functions<br>
+            one(two)
+         </p>
          <hr>
-        </header>
-        <h2>Starting notes in javaScript </h2>
-        <br>
-        <a  href="week07.html">Note week7 </a>
-        <br>
-     
-        <br>
-        <a  href="teamwork.html">Note</a>
-      
-    
-   
- <script src="js/week04.js"></script>
-</body>
-<footer>
-    &copy; 2022 | Portfolio 
-| Alain Solohery
-</footer>
-
-
+         <h3>Closure</h3>
+         <p>A closure is a block of code that can be referenced (and passed around)
+            with access to the variables of the enclosing scope.
+            A closure is a function that references variables in the outer scope from its inner scope. The closure preserves the outer scope inside its inner scope.
+            To understand the closures, you need to know how the lexical scoping works first.
+         </p>
+         <br>
+         <p>Example<br>
+            function greeting(message) {<br>
+            return function(name){<br>
+            return message + ' ' + name;<br>
+            }<br>
+            }<br>
+            let sayHi = greeting('Hi');<br>
+            let sayHello = greeting('Hello');<br>
+            console.log(sayHi('John')); // Hi John<br>
+            console.log(sayHello('John')); // Hello John<br>
+         </p>
+         <h3>Summary chp 11</h3>
+         <br>
+         <p>What is Ajax?</p>
+         <p> <strong>AJAX stands for  ASYNCHRONOUS JAVASCRIPT AND XML</strong><br>
+            Ajax is a technique that allows web pages to communicate asynchronously with a server
+            and dynamically updates web pages without reloading. This enables data to be sent and
+            received in the background, as well as portions of a page to be updated in response to user
+            events, while the rest of the program continues to run.In ome word AJax is web development echnique
+            It also means of loading data from the server and selectively updating parts
+            of a web page without reloading the whole page.Basically, what Ajax does is make use of the browser's 
+            built-in XMLHttpRequest (XHR) object to send and receive information to and from a web server asynchronously, in the background, without blocking the page or interfering with the user's experience.
+         </p>
+         <h3>Summary Chapter13</h3>
+         <p >
+            AJAX is not a programming language.<br>
+            AJAX is a technique for accessing web servers from a web page.<br>
+            AJAX stands for Asynchronous JavaScript And XML.<br>
+            Ajax is a technique for sending and receiving data asynchronously in the background.<br>
+            The data can be sent in many forms, but it is usually inJSON.<br>
+            Ajax can be used for making partial page updates without having to do a full pagereload.<br>
+            Ajax can be used for communicating with external APIs.<br>
+            Ajax requests are made using instances of the XMLHttpRequest object.<br>
+            Requests can receive data using a GET request or send data using a POST request.<br>
+            JSONP or JSON with Padding is a technique used to bypass the same-origin policy.<br>
+            It wraps the response data in a JavaScript callback function that is dynamically inserted
+            the markup.
+         </p>
+      </div>
+      <a href="../index.html">Back to Index</a>
+      <a  href="teamwork.html">TeamWork</a>
+     <!-- <script src="js/week04.js"></script>-->
+   </body>
+   <footer>
+      &copy; 2022 | Portfolio 
+      | Alain Solohery
+   </footer>
 </html>
