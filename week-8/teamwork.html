@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Russo+One&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+         />
+    <!--<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/team5week7.css">  -->         
+    <style>
+        .pagination {
+          display: inline-block;
+        }
+        
+        .pagination a {
+          color: black;
+          float: left;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+        </style>
+<body>
+
+
+<main>
+    <div id="">
+        <h2>Swapi</h2>
+        <ul id="Swapi List">
+        </ul>
+
+       
+        <button id="request" onclick="getSwapi('https://swapi.dev/api/people')">Click for request</button>
+        <div id="buttons">
+
+      <!--<button id="previous" onclick="previous()">Previous</button>
+        <button id="next" onclick="next()">Next</button>-->
+    </div>
+    <table id="listPeople"></table>
+
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Birthday</th>
+          <th>Height</th>
+        </tr>
+        <tr>
+          <td id="name">Alfreds Futterkiste</td>
+          <td id="birthday"></td>
+          <td id="height"></td>
+        </tr>
+       
+        </table>
+        <div class="pagination">
+            <a href="#" onclick="previous()">&laquo;</a>
+            <span id="pages"></span>
+            <a href="#" onclick="next()">&raquo;</a>
+          </div>
+
+
+
+</main>
+
+<a href="../index.html">Back to Index</a>
+
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
