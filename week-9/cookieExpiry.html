@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Expiry Date</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+const expiryDate = new Date();
+    const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;
+    expiryDate.setTime(tomorrow);
+    
+    document.cookie = `name=Batman; expires=${
+     expiryDate.toUTCString()}`;
+    
+   // An alternative is to set the max-age value. This takes a value in seconds, but it
+   // wasn't supported in Internet Explorer before version 10:
+    
+    document.cookie = 'name=Batman; max-age=86400' // 86400 secs
+    // = 1 day
+    
+   // Don't Rely On Cookie Expiry
+   //The Path and Domain of Cookies
+
+//By default, cookies can only be read by pages inside the same directory and
+//domain as the file was set. This is for security reasons so that access to the cookie
+//is limited.
+
+//The path can be changed so that any page in the root directory can read the
+//cookie. It’s done by adding the string '; path=/' to the end of the cookie when it is
+//set:
+document.cookie = 'name=Batman; path=/'
+//It’s also possible to set the domain by adding "; domain=domainName" to the end
+//of the cookie:
+
+document.cookie = 'name=Batman; domain=sitepoint.com';
+//Adding the string '; secure' to the end of a cookie will ensure it’s only transmitted
+//over a secure HTTPS network:
+document.cookie = 'name=Batman; secure';
+//Deleting Cookies
+//To remove a cookie, you need to set it to expire at a time in the past:
+document.cookie = 'name=Batman; expires=Thu, 01 Jan 19 00:00:01 GMT';
+
+
+   
+   
+   </script>
+</html>

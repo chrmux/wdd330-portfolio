@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang=“en”>
+<head>
+<meta charset=“utf-8”>
+
+<title>1-Time function</title>
+<title>2-Animation Example</title>
+<link rel=“stylesheet” href=“css/styles.css”>
+</head>
+<style>
+#square {
+margin: 100px;
+width: 100px;
+height: 100px;
+background: #d16;
+}
+
+#square {
+margin: 100px;
+width: 100px;
+height: 100px;
+background: #cc0;
+animation: spin 4s linear infinite;
+}
+
+@keyframes spin { from { transform:rotate(360deg); } to
+{ transform:rotate(0deg); } }
+
+</style>
+<h3>1-Time function</h3>
+<br>
+<p>
+    window and scheduling methods for execution <br>
+    window.setTimeout() <br>
+    window.setTimeout( () => alert("Time's Up!"), 3000); // 4 <br>
+    The number returned is an ID that references that timeout, you can use that number to clear the timeout. <br>
+    window.clearTimeout(4); <br>
+
+
+ <t
+
+<button onclick="setTimeout(myFunction, 2000)">Click Me</button>
+<p><strong>Note:</strong> Alert popup will be displayed 2 seconds after clicking the button.</p>
+<body>
+    <h3>2-Animation</h3>
+ 
+<div id='square'></div>
+
+</body>
+
+<script src='js/scripts.js'></script>
+
+<script>
+
+    function myFunction() {
+        alert('Hello World!');
+    }
+</script>
+     
+
+</html>

@@ -22,52 +22,99 @@
           padding: 8px 16px;
           text-decoration: none;
         }
-        </style>
-<body>
+     
+          ul {
+            display: flex;
+            list-style-type: none;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid gray;
+
+            
+          }
+          ul li {
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          button {
+            margin-top: 10px;
+            width: 100px;
+          }
+
+          .pagination {
+            display: inline-block;
+          }
+
+          .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          .pagination a:hover  {
+            background: black;
+            color: white;
+          }
+          #shipList {
+            display: flex;
+            flex-direction: column;
+            justify-content: auto;
+            align-content: auto;
+          }
+          td {
+            border-radius: 5px;
+            background-color: lightgray;
+            padding: 10px;
+            cursor: pointer;
+          }
+                  </style>
+          <body>
 
 
-<main>
-    <div id="">
-        <h2>Swapi</h2>
-        <ul id="Swapi List">
-        </ul>
+          <main>
+              <div id="">
+                  <h2>Swapi</h2>
+                  <ul id="Swapi List">
+                  </ul>
 
-       
-        <button id="request" onclick="getSwapi('https://swapi.dev/api/people')">Click for request</button>
-        <div id="buttons">
+                
+                  <button id="request" onclick="getSwapi('https://swapi.dev/api/people')">Click for request</button>
+                  <div id="buttons">
 
-      <!--<button id="previous" onclick="previous()">Previous</button>
-        <button id="next" onclick="next()">Next</button>-->
-    </div>
-    <table id="listPeople"></table>
+                <!--<button id="previous" onclick="previous()">Previous</button>
+                  <button id="next" onclick="next()">Next</button>-->
+              </div>
+              <table id="listPeople"></table>
 
-    <table>
-        <tr>
-          <th>Name</th>
-          <th>Birthday</th>
-          <th>Height</th>
-        </tr>
-        <tr>
-          <td id="name">Alfreds Futterkiste</td>
-          <td id="birthday"></td>
-          <td id="height"></td>
-        </tr>
-       
-        </table>
-        <div class="pagination">
-            <a href="#" onclick="previous()">&laquo;</a>
-            <span id="pages"></span>
-            <a href="#" onclick="next()">&raquo;</a>
-          </div>
-
-
-
-</main>
-
-<a href="../index.html">Back to Index</a>
+              <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Height</th>
+                  </tr>
+                  <tr>
+                    <td id="name">Alfreds Futterkiste</td>
+                    <td id="birthday"></td>
+                    <td id="height"></td>
+                  </tr>
+                
+                  </table>
+                  <div class="pagination">
+                      <a href="#" onclick="previous()">&laquo;</a>
+                      <span id="pages"></span>
+                      <a href="#" onclick="next()">&raquo;</a>
+                    </div>
 
 
-<script src="js/main.js"></script>
-</body>
+
+          </main>
+
+          <a href="../index.html">Back to Index</a>
+
+
+          <script src="js/main.js"></script>
+          </body>
 
 </html>
