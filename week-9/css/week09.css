@@ -1,0 +1,31 @@
+.chapt11{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.intro{
+    grid-column: 1;
+    background-color: antiquewhite;
+}
+
+.apis{
+    grid-column: 2;
+    background-color: rgb(162, 145, 112);
+    
+}
+
+.cookies{
+    grid-column: 3;
+    background-color: antiquewhite;
+}
+.timing{
+    grid-column: 4;
+    background-color:rgb(162, 145, 112);
+}
+h1, p{
+    padding-left: 10px;
+}
+h3{
+    color: orange;
+}
