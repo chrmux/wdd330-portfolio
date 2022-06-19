@@ -7,21 +7,25 @@
 .intro{
     grid-column: 1;
     background-color: antiquewhite;
+    border-radius: 10px;
 }
 
 .apis{
     grid-column: 2;
     background-color: rgb(162, 145, 112);
+    border-radius: 10px;
     
 }
 
 .cookies{
     grid-column: 3;
     background-color: antiquewhite;
+    border-radius: 10px;
 }
 .timing{
     grid-column: 4;
     background-color:rgb(162, 145, 112);
+    border-radius: 10px;
 }
 h1, p{
     padding-left: 10px;
