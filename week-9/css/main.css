@@ -1,0 +1,90 @@
+body {
+   
+    font-size: 600;
+    font-family: lato, sans-serif;
+}
+
+body {
+    background-color: rgb(198, 198, 198);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+input {
+    width: 25%;
+}
+
+textarea {
+    width: 800px;
+    height: 250px;
+    background-color: rgb(162, 145, 112);
+}
+img {
+   margin: auto;
+}
+
+
+#box:hover {
+    
+    transform: rotate(5deg);
+   
+}
+#box {
+    width:100%;
+    margin: 5px;
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 5px 10px 15px;
+    transition: width 6s, height 2s, background-color 2s, transform 2s;
+
+}
+
+a:hover {
+    font-size: 600;
+    
+}
+h1 a{
+    color:rgb(90, 55, 13);
+}
+
+h5 {
+    font-size: 30px;
+}
+
+p, a{
+    font-size: 20px;
+}
+#directory, p{
+    text-align: center;
+}
+
+h5 a{
+    text-align: center;
+}
+
+hr{
+    width: 50%;
+}
+div#week1{
+    background-color: #d57c0f;
+    border-radius: 10px 10px;
+    transition: transform .80s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul p{
+    text-align: left;
+}
+h1 {
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
