@@ -8,7 +8,7 @@
 <link rel=“stylesheet” href=“css/styles.css”>
 </head>
 <style>
-#square {
+/*#square {
 margin: 100px;
 width: 100px;
 height: 100px;
@@ -24,7 +24,33 @@ animation: spin 4s linear infinite;
 }
 
 @keyframes spin { from { transform:rotate(360deg); } to
-{ transform:rotate(0deg); } }
+{ transform:rotate(0deg); } }*/
+
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #d16;
+    animation: spin 100s linear infinite;
+    @keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(3600deg); } }
+}
+
+#square2 {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: rgb(190, 54, 9);
+    animation: spin 50s linear infinite;
+}
+
+#square3 {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #cc0;
+    animation: spin 100s linear infinite;
+}
+@keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(3600deg); } }
 
 </style>
 <h3>1-Time function</h3>
@@ -37,14 +63,18 @@ animation: spin 4s linear infinite;
     window.clearTimeout(4); <br>
 
 
- <t
+ 
 
 <button onclick="setTimeout(myFunction, 2000)">Click Me</button>
 <p><strong>Note:</strong> Alert popup will be displayed 2 seconds after clicking the button.</p>
 <body>
     <h3>2-Animation</h3>
  
-<div id='square'></div>
+<div id='square'>request </div>
+
+<div id='square'>requestAnimationFrame animation</div>
+<div id="square2">setInterval animation</div>
+<div id="square3">CSS animation</div>
 
 </body>
 
