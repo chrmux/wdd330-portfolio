@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "analyze-css": "^2.1.40",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "uncss": "^0.17.3"
+  }
+}
