@@ -1,0 +1,21 @@
+.chapt{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .intro{
+    grid-column: 1;
+    background-color: bisque;
+  }
+  .sum{
+    grid-column: 1;
+    background-color: lightgray;
+  }
+
+  .fetch{
+    grid-column: 3;
+    background-color: bisque;
+  }
+  .link, footer, p, h1,h2,h3{
+    text-align: center;
+  }
