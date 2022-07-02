@@ -1,0 +1,19 @@
+#label {
+    grid-row: 1;
+    background-color: rgb(252, 172, 1);
+    color: white;
+    border-radius: 20px;
+    max-height: 50px;
+  
+}
+#input{
+margin-bottom: 5px;
+margin-top: 5px;
+background-color: rgb(252, 172, 1);
+width:100px;
+display: block;
+margin: 0 auto;
+padding: 10px;
+margin-top: 20px;
+border-radius: 20px 20px;
+}
